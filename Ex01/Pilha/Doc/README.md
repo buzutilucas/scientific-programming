@@ -28,11 +28,11 @@ Cria uma pilha a partir de um tamanho determinado pelo usuário.
 
 |      |                                Descrição                                  |
 |------|---------------------------------------------------------------------------|
-| void | [`push(Type e)`](#__push__) - Empilha o próximo elemento para a próxima posição vazia. |
-| Type | [`pop()`](#__pop__) - Remove o elemento do topo.                                      |
-| bool | [`empty()`](#__empty__) - Verifica se a pilha está vazia.                               |
-| bool | [`full()`](#__full__) - Verifica se a pilha está cheia.                                |
-| Type | [`top()`](#__top__) - Informa o elemento do topo da pilha.                            |
+| void | [`push(Type e)`](#push) - Empilha o próximo elemento para a próxima posição vazia. |
+| Type | [`pop()`](#pop) - Remove o elemento do topo.                                      |
+| bool | [`empty()`](#empty) - Verifica se a pilha está vazia.                               |
+| bool | [`full()`](#full) - Verifica se a pilha está cheia.                                |
+| Type | [`top()`](#top) - Informa o elemento do topo da pilha.                            |
 
 ---
 

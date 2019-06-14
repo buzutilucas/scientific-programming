@@ -28,11 +28,11 @@ Cria uma fila a partir de um tamanho determinado pelo usuário.
 
 |      |                                Descrição                                  |
 |------|---------------------------------------------------------------------------|
-| void | [`enqueue(Type e)`](#__enqueue__) - Anexa o próximo elemento para a próxima posição vazia. |
-| Type | [`dequeue()`](#__dequeue__) - Remove o primeiro elemento da fila.                                      |
-| bool | [`empty()`](#__empty__) - Verifica se a fila está vazia.                               |
-| bool | [`full()`](#__full__) - Verifica se a fila está cheia.                                |
-| Type | [`peek()`](#__peek__) - Informa o elemento do início da fila.                            |
+| void | [`enqueue(Type e)`](#enqueue) - Anexa o próximo elemento para a próxima posição vazia. |
+| Type | [`dequeue()`](#dequeue) - Remove o primeiro elemento da fila.                                      |
+| bool | [`empty()`](#empty) - Verifica se a fila está vazia.                               |
+| bool | [`full()`](#full) - Verifica se a fila está cheia.                                |
+| Type | [`peek()`](#peek) - Informa o elemento do início da fila.                            |
 
 ---
 
