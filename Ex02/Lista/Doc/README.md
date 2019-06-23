@@ -22,7 +22,7 @@ __Autor:__ Lucas Fontes buzuti
 ## Construtor
 `dll::LinkedList<Type>()`
 
-Cria uma objeto lista.
+Cria um objeto lista.
 
 ## Métodos
 
