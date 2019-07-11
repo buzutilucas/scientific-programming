@@ -207,12 +207,10 @@ Type dll::LinkedList<Type>::remove(Type data)
   {
     /*Removes element in the first position [0].*/
     element = LinkedList::removeFront();
-    this->size--;
     return element;
   } else if(temp->next == NULL) { //checks if the element is in the last position
     /*Removes element in the last position [n].*/
     element = LinkedList::removeBack();
-    this->size--;
     return element;
   } else {
     /*Removes the elements that are between
