@@ -8,4 +8,6 @@ __1.__ [Pilha e Fila](https://github.com/buzutilucas/scientific-programming/tree
 
 __2.__ [Lista Duplamente Encadeada](https://github.com/buzutilucas/scientific-programming/tree/master/Ex02) (Exercício 02)
 
+__3.__ [Busca Cega e Busca Informada](https://github.com/buzutilucas/scientific-programming/tree/master/Ex03) (Exercício 03)
+
 Autor: Lucas Fontes Buzuti
