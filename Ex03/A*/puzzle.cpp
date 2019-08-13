@@ -365,6 +365,7 @@ int** puzzle8::nextGame(int position)
       }
     }
   }
+  return NULL;
 }
 
 /*Vector with all possible piece moves.
@@ -456,6 +457,7 @@ int* puzzle8::allDirection(int** game)
       }
     }
   }
+  return NULL;
 }
 
 #endif //PUZZLE_CPP
