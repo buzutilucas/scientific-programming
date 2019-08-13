@@ -10,4 +10,6 @@ __2.__ [Lista Duplamente Encadeada](https://github.com/buzutilucas/scientific-pr
 
 __3.__ [Busca Cega e Busca Informada](https://github.com/buzutilucas/scientific-programming/tree/master/Ex03) (Exercício 03)
 
+__4.__ [Descida de Gradiente](https://github.com/buzutilucas/scientific-programming/tree/master/Ex04) (Exercício 04)
+
 Autor: Lucas Fontes Buzuti
