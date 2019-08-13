@@ -18,7 +18,7 @@
 class GradDesc
 {
   private:
-    dll::LinkedList<float> poly; //funtion polynomial
+    dll::LinkedList<float>* poly; //funtion polynomial
     float val; //inicial value
     float learningRate; //learning rate
 

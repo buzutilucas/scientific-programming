@@ -33,7 +33,7 @@ GradDesc::GradDesc(dll::LinkedList<float> &poly,  float val, float learningRate)
     float val - inicial value.
     float learningRate - learning rate.
   */
-  this->poly = poly;
+  this->poly = &poly;
   this->val = val;
   this->learningRate = learningRate;
 
@@ -49,11 +49,11 @@ float GradDesc::diff()
 
   unsigned int power = 0;
   float ans = 0.;
-  while(power != this->poly.getSize())
+  while(power != this->poly->getSize())
   {
     if(power != 0)
     {
-      dll::Node<float>* coeff = this->poly.search(power);
+      dll::Node<float>* coeff = this->poly->search(power);
       ans += coeff->getData()*power*pow(this->val, power-1);
     }
     power++;
@@ -71,9 +71,9 @@ float GradDesc::func()
 
   unsigned int power = 0;
   float ans = 0.;
-  while(power != this->poly.getSize())
+  while(power != this->poly->getSize())
   {
-    dll::Node<float>* coeff = this->poly.search(power);
+    dll::Node<float>* coeff = this->poly->search(power);
     if(power != 0)
     {
       ans += coeff->getData()*pow(this->val, power);
