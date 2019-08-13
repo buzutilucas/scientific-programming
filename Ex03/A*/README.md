@@ -1,4 +1,4 @@
-### Documentação da classe lista duplamente encadeada
+### Documentação da classe
 Para acessar a documentação da classe [link aqui](https://github.com/buzutilucas/scientific-programming/tree/master/Ex03/A*/Doc)
 
 ### Como Compilar
