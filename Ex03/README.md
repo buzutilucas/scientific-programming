@@ -1,4 +1,4 @@
-# Algoritmo Lista Duplamente Encadeada
+# Algoritmo Busca Cega e Busca Informada
 
 Nesta pasta podem ser encontrados os seguintes arquivo(s) e pasta(s):
 
