@@ -1,5 +1,5 @@
 ### Documentação da classe
-Para acessar a documentação da classe [link aqui](https://github.com/buzutilucas/scientific-programming/tree/master/Ex03/Gradient_Descent/Doc)
+Para acessar a documentação da classe [link aqui](https://github.com/buzutilucas/scientific-programming/tree/master/Ex04/Gradient_Descent/Doc)
 
 ### Como Compilar
 __Linux e MacOS__
