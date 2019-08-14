@@ -13,21 +13,18 @@
 #ifndef GRADDESC_H
 #define GRADDESC_H
 
-#include "dlist.h"
-
 class GradDesc
 {
   private:
-    dll::LinkedList<float>* poly; //funtion polynomial
     float val; //inicial value
     float learningRate; //learning rate
 
     /*Methods (function prototypes)*/
+    float (*func)(float);
     float diff();
-    float func();
 
   public:
-    GradDesc(dll::LinkedList<float> &poly,  float val, float learningRate); //default constructor
+    GradDesc(float (*func)(float),  float val, float learningRate); //default constructor
     ~GradDesc() { } //destructor
 
     /*Methods (function prototypes)*/

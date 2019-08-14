@@ -18,22 +18,23 @@
 #include <iomanip>
 #include <cmath>
 #include "graddesc.h"
-#include "dlist.h"
+
+#define DELTA 0.00001
 
 /*----------------------------------------------------------------------
                          Methods of GradDesc class
 ----------------------------------------------------------------------*/
 /*Creat a gradient descent object.*/
-GradDesc::GradDesc(dll::LinkedList<float> &poly,  float val, float learningRate)
+GradDesc::GradDesc(float (*func)(float),  float val, float learningRate)
 {
   /*
   Param:
-    dll::LinkedList<float> &poly - address of list object (polynomial that
-                                   will be applied to the algorithm).
+    float (*func)(float) - function address (polynomial that will
+                           be applied to the algorithm).
     float val - inicial value.
     float learningRate - learning rate.
   */
-  this->poly = &poly;
+  this->func = func;
   this->val = val;
   this->learningRate = learningRate;
 
@@ -44,61 +45,31 @@ an initial variable.*/
 float GradDesc::diff()
 {
   /*
+      df     f(x+Dx) - f(x)
+     ---- = ----------------
+      dx           Dx
+
   Return: derivative of a polynomial
   */
 
-  unsigned int power = 0;
-  float ans = 0.;
-  while(power != this->poly->getSize())
-  {
-    if(power != 0)
-    {
-      dll::Node<float>* coeff = this->poly->search(power);
-      ans += coeff->getData()*power*pow(this->val, power-1);
-    }
-    power++;
-  }
-  return ans;
-}
-
-/*Get the result of a function given
-an initial variable.*/
-float GradDesc::func()
-{
-  /*
-  Return: polynomial on val
-  */
-
-  unsigned int power = 0;
-  float ans = 0.;
-  while(power != this->poly->getSize())
-  {
-    dll::Node<float>* coeff = this->poly->search(power);
-    if(power != 0)
-    {
-      ans += coeff->getData()*pow(this->val, power);
-    }else{
-      ans += coeff->getData();
-    }
-    power++;
-  }
-  return ans;
+  float d = (this->func(this->val + DELTA) - this->func(this->val))/DELTA;
+  return d;
 }
 
 /*Runs the gradient descent algorithm.*/
 void GradDesc::fit()
 {
-  float f = GradDesc::func();
+  float f = this->func(this->val);
 
   std::cout << std::fixed << std::setprecision(2);
-  std::cout << "Derivative: " << GradDesc::diff() << " | x: " << this->val << "| y: " << f << std::endl;
+  std::cout << "Derivative: " << this->func(this->val) << " | x: " << this->val << "| y: " << f << std::endl;
   while(f != 0.00)
   {
     float s = GradDesc::diff();
     this->val -= this->learningRate*s;
     f = GradDesc::diff();
     f = floorf(f * 100) / 100;
-    std::cout << "Derivative: " << f << " | x: " << this->val << "| y: " << GradDesc::func() << std::endl;
+    std::cout << "Derivative: " << f << " | x: " << this->val << "| y: " << this->func(this->val) << std::endl;
   }
 }
 
