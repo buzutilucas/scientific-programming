@@ -12,4 +12,6 @@ __3.__ [Busca Cega e Busca Informada](https://github.com/buzutilucas/scientific-
 
 __4.__ [Descida de Gradiente](https://github.com/buzutilucas/scientific-programming/tree/master/Ex04) (Exercício 04)
 
+__5.__ [Métodos Numéricos](https://github.com/buzutilucas/scientific-programming/tree/master/Ex05) (Exercício 05)
+
 Autor: Lucas Fontes Buzuti
