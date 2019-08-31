@@ -14,4 +14,8 @@ __4.__ [Descida de Gradiente](https://github.com/buzutilucas/scientific-programm
 
 __5.__ [Métodos Numéricos](https://github.com/buzutilucas/scientific-programming/tree/master/Ex05) (Exercício 05)
 
+~~__6.__ [Monte Carlo]() (Exercício 06)~~
+
+__7.__ [Monte Carlo em MPI](https://github.com/buzutilucas/scientific-programming/tree/master/Ex07) (Exercício 07)
+
 Autor: Lucas Fontes Buzuti
