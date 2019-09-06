@@ -4,7 +4,7 @@
 
 using namespace std;
 
-float f1(float x) {return pow(M_E,2);} //e^x
+float f1(float x) {return pow(M_E,x);} //e^x
 float f2(float x) {return sqrt(1-pow(x,2));} //sqrt(1-x^2)
 float f3(float x) {return pow(M_E,pow(-x,2));} //e^(-x^2)
 

@@ -4,7 +4,7 @@
 | @author Lucas Fontes Buzuti                                          |
 | @version V0.0.1                                                      |
 | @created 08/14/2019                                                  |
-| @modified 08/16/2019                                                 |
+| @modified 09/06/2019                                                 |
 | @e-mail lucas.buzuti@outlook.com                                     |
 +----------------------------------------------------------------------+
             Source file containing the implementation of the
@@ -137,8 +137,8 @@ float NewtonCotes::trapezoidal_next()
 
     for(int i=0; i<this->subintervals-1; i++)
     {
-      s += this->func(x);
       x += this->a + 0.5*x;
+      s += this->func(x);
     }
     sum = (this->b - this->a)*(sum+2*s)/(2*this->subintervals);
     return sum;
@@ -198,11 +198,13 @@ float NewtonCotes::adaptQuad(std::string method, float eps)
       this->err = -1*pow(h,3)/12;              //error trapezoidal
       this->err *= NewtonCotes::diff2(eps);    //-(h^3/12)f"(x0)
       this->err = abs(this->err);             //absolute error
-      return this->s;
+      if(std::isnan(this->s))
+        return this->old;
+      else
+        return this->s;
     }
-    this->old = this->s;
     this->n++;
-    if(this->n == 4) return this->s;
+    this->old = this->s;
     return NewtonCotes::adaptQuad("trap");
 
   }else if(method == "rect"){ //Adaptive Quadrature by Rectangle
@@ -213,10 +215,13 @@ float NewtonCotes::adaptQuad(std::string method, float eps)
       this->err = pow(h,3)/24;                  //error midpoint
       this->err *= NewtonCotes::diff2(eps);    //+(h^3/24)f"(x0)
       this->err = abs(this->err);              //absolute error
-      return this->s;
+      if(std::isnan(this->s))
+        return this->old;
+      else
+        return this->s;
     }
-    this->old = this->s;
     this->n++;
+    this->old = this->s;
     return NewtonCotes::adaptQuad("rect");
 
   }else if(method == "simp"){ //Adaptive Quadrature by Simpson
@@ -228,11 +233,14 @@ float NewtonCotes::adaptQuad(std::string method, float eps)
       this->err = -1*pow(h,5)/2880;             //error simpson
       this->err *= NewtonCotes::diff4(eps);    //-(h^5/2880)f""(x0)
       this->err = abs(this->err);              //absolute error
-      return this->s;
+      if(std::isnan(this->s))
+        return this->old;
+      else
+        return this->s;
     }
+    this->n++;
     this->old = this->s;
     this->oldst = this->st;
-    this->n++;
     return NewtonCotes::adaptQuad("simp");
 
   }else{
