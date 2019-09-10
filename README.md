@@ -18,4 +18,6 @@ __5.__ [Métodos Numéricos](https://github.com/buzutilucas/scientific-programmi
 
 __7.__ [Monte Carlo em MPI](https://github.com/buzutilucas/scientific-programming/tree/master/Ex07) (Exercício 07)
 
+__8.__ [Métodos Numéricos em OpenMP](https://github.com/buzutilucas/scientific-programming/tree/master/Ex08) (Exercício 08)
+
 Autor: Lucas Fontes Buzuti
